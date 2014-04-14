@@ -1,0 +1,96 @@
+window.i18n = {
+  <% I18n.translate("cancel", :locale => 'de') %>
+  translations: <%= I18n.backend.send(:translations).to_json.html_safe %>,
+  placeholder: /(?:%\{)(.*?)(?:\})/gm,
+  defaultLocale: "<%= Metter.locales.first %>",
+  defaultScope: null,
+
+  locale: (function() {
+    var
+      htmlTags = document.getElementsByTagName("html");
+
+    if (htmlTags.length) {
+      return htmlTags[0].getAttribute("lang") || i18n.defaultLocale;
+    } else {
+      return i18n.defaultLocale;
+    }
+  })(),
+
+  lookup: function(key, options) {
+    if (!key){
+      return "N/A";
+    }
+
+    var
+      options = options || {},
+      scope   = options.scope || i18n.defaultScope,
+      keys    = (scope ? scope + "." + key : key).split("."),
+      subtree = i18n.translations[options.locale || i18n.locale];
+
+    for (var i = 0, ii = keys.length; i < ii; i++) {
+      if (subtree) {
+        subtree = subtree[keys[i]];
+      }
+    }
+
+    if (!subtree) {
+      if (options.default) {
+        return options.default;
+      }
+
+      if (console && console.log) {
+        console.log("no translation found for key: " + key);
+        return "N/A";
+      }
+    }
+
+    return subtree;
+  },
+
+  interpolate: function(message, options) {
+    var
+      options = options || {},
+      matches = message.match(i18n.placeholder),
+      placeholder, name, value, regex;
+
+    if (!matches) {
+      return message;
+    }
+
+    for (var i = 0; placeholder = matches[i]; i++) {
+      name  = placeholder.replace(i18n.placeholder, "$1");
+      value = options[name];
+
+      if (!value) {
+        value = "[missing " + placeholder + " value]";
+      }
+
+      regex = new RegExp(placeholder.replace(/\{/gm, "\\{").replace(/\}/gm, "\\}"));
+      message = message.replace(regex, value);
+    }
+
+    return message;
+  },
+
+  translate: function(key, options) {
+    var
+      options = options || {},
+      translation = i18n.lookup(key, options);
+
+    try {
+      if (typeof(translation) == "object") {
+        //if (typeof(options.count) == "number") {
+        //  return this.pluralize(options.count, scope, options);
+        //} else {
+          return translation;
+        //}
+      } else {
+        return i18n.interpolate(translation, options);
+      }
+    } catch(err) {
+      console.log("missing translation: " + key);
+    }
+  }
+};
+
+window._t = i18n.translate;

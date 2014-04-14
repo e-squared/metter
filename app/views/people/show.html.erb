@@ -1,0 +1,34 @@
+<%= headline_tag do %>
+  <%= wikipedia_link @person %>
+  <%= edit_link @person %>
+  <%= delete_link @person %>
+<% end %>
+
+<div class="well">
+  <dl class="dl-horizontal dl-person">
+    <dt><%=t ".name" %></dt>
+    <dd><%= @person.name %></dd>
+
+    <dt><%=t ".description" %></dt>
+    <dd><%= @person.description %></dd>
+
+    <dt><%=t ".born" %></dt>
+    <dd><%= born @person %></dd>
+
+    <dt><%=t ".died" %></dt>
+    <dd><%= died @person %></dd>
+
+    <dt><%=t ".alternative_names" %></dt>
+    <dd><%= alternative_names @person %></dd>
+
+    <dt><%=t ".rank" %></dt>
+    <dd><%= @person.rank %></dd>
+
+    <dt><%=t :created %></dt>
+    <dd><%= time_tag @person.created_at %></dd>
+
+    <dt><%=t :updated %></dt>
+    <dd><%= time_tag @person.created_at %></dd>
+  </dl>
+</div>
+

@@ -1,0 +1,54 @@
+de:
+  static:
+    about:
+      title: "Impressum"
+      headline: "Impressum"
+      content_html: |-
+        <p>
+          Der <em>Brief-Metadaten-Prototyp</em> ist ein experimentelles Werkzeug für die Erfassung von
+          Korrespondenz-Metadaten, welches den Fokus auf Benutzerfreundlichkeit und Effizienz legt.
+        </p>
+
+        <p>
+          Das Werkzeug wurde im Rahmen des durch das Bundesministerium für Bildung und Forschung geförderten
+          Verbundprojekts <a href="http://kompetenzzentrum.uni-trier.de/de/projekte/projekte/briefnetzwerk/" target="_blank">Vernetzte
+          Korrespondenzen</a> [Bewilligungsnummer 01UG1354C] erstellt. Aufbauend auf der Materialbasis
+          ausgewählter Korrespondenznetze deutschsprachiger Schriftsteller, die durch die Machtergreifung
+          der Nationalsozialisten ins Exil gezwungen wurden, besteht das Ziel des Verbundprojekts, an dem
+          neben der <a href="http://www.uni-halle.de/" target="_blank">Martin-Luther-Universität
+          Halle-Wittenberg</a> das <a href="http://kompetenzzentrum.uni-trier.de/" target="_blank">Kompetenzzentrum
+          für elektronische Erschließungs- und Publikationsverfahren in den Geisteswissenschaften Trier</a>
+          und das <a href="http://www.dla-marbach.de/" target="_blank">Deutsche Literaturarchiv Marbach</a>
+          beteiligt ist, in der Konzeption und Realisierung einer generischen modularen interaktiven
+          internetbasierten Plattform zur Erschließung, Erforschung und Visualisierung von sozialen,
+          räumlichen, zeitlichen und thematischen Netzen in Briefkorpora.
+        </p>
+        <h4 style="margin-top: 20px;">Veröffentlichungen zu dem Werkzeug</h4>
+        <ul>
+          <li>
+            <strong>An Optimized Platform for Capturing Metadata of Historical Correspondences.</strong> M. Andert, J. Ritter, and P. Molitor.
+            Presentiert bei der <a href="http://dh2013.unl.edu/" target="_blank">Digital Humanities 2013</a>, Lincoln, Nebraska, Juli 2013.
+            <a href="http://dh2013.unl.edu/abstracts/ab-246.html" target="_blank">[Abstract]</a>,
+            <a href="%{slides_url}" target="_blank">[Folien]</a>
+          </li>
+        </ul>
+        <h4 style="margin-top: 20px;">Inhaltlich verantwortlich</h4>
+        <p>
+          Prof. Dr. Paul Molitor / Dr. Jörg Ritter
+        </p>
+        <h4 style="margin-top: 20px;">Institution</h4>
+        <p>
+          Martin-Luther-Universität Halle-Wittenberg<br>
+          Institut für Informatik<br>
+          vertreten durch den Geschäftsführenden Direktor<br>
+          Hausanschrift (Sitz): Von-Seckendorff-Platz 1, 06120 Halle<br>
+          Postanschaft: 06099 Halle (Saale)<br>
+          <br>
+          Telefon +49 (0)345 5524710<br>
+          Fax +49 (0)345 5527009
+        </p>
+        <h4 style="margin-top: 20px;">Umsatzsteuer-Identifikationsnummer der Martin-Luther-Universität</h4>
+        <p>
+          DE 811353703
+        </p>
+

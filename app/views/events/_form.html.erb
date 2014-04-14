@@ -1,0 +1,15 @@
+<%= form_for @event, :html => { :class => "form-horizontal well form-event" } do |f| %>
+  <%= f.validation_errors %>
+
+  <% if @event.new_record? %>
+    <%= f.input :type do %>
+      <%= select_tag :type, options_for_select(Event.types.map { |type| [tt(type.new), type.name] }, params[:type]), :id => "event_type" %>
+    <% end %>
+  <% end %>
+
+  <%= f.input :date, :as => :date_select, :start_year => 100, :end_year => Time.now.year, :max_years_allowed => 2000, :default => Date.today %>
+  <%= f.input :description, :as => :text_area %>
+
+  <%= f.buttons %>
+<% end %>
+

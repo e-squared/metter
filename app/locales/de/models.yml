@@ -1,0 +1,142 @@
+de:
+  # Translate model names. Used in Model.human_name().
+  models: &models
+    user: "Benutzer"
+    session: "Sitzung"
+    person: "Person"
+    event: "Ereignis"
+    letter: "Brief"
+    contacting: "Kontaktierung"
+
+  # Attributes configuration
+  attributes: &attributes
+    # Attributes names common to most models
+    type: "Typ"
+    name: "Name"
+    title: "Titel"
+    email: "E-Mail-Adresse"
+    description: "Beschreibung"
+    summary: "Zusammenfassung"
+    created_at: "Erstellt am"
+    updated_at: "Aktualisert am"
+
+    # Translate model attribute names. Used in Model.human_attribute_name(attribute).
+    user:
+      first_name: "Vorname"
+      last_name: "Nachname"
+      login: "Username"
+      password: "Neues Passwort"
+      password_confirmation: "Neues Passwort (nochmal)"
+      locale: "Sprache"
+
+    session:
+      login: "Username"
+      password: "Passwort"
+      base: "Username oder Passwort"
+
+    person:
+      date_of_birth: "Geburtsdatum"
+      unformatted_date_of_birth: "Geburtsdatum"
+      place_of_birth: "Geburtsort"
+      date_of_death: "Sterbedatum"
+      unformatted_date_of_birth: "Sterbedatum"
+      place_of_death: "Sterbeort"
+      alternative_names: "Auch bekannt als"
+      wikipedia_identifier: "Wikipedia Artikel-ID"
+      viaf_identifier: "VIAF-ID"
+      gnd_identifier: "GND-ID"
+      lccn_identifier: "LCCN-ID"
+      rank: "Suchrang"
+      wikipedia_image_url: "Wikipedia-Bild-URL"
+      wikipedia_about_html: "Wikipedia-Zusammenfassung (HTML)"
+
+    event:
+      date: "Datum"
+
+    letter:
+      sender_name: "Absender"
+      sender_address: "Adresse des Absenders"
+      recipient_name: "Empfänger"
+      recipient_address: "Adresse des Empfängers"
+      date_of_writing: "Schreibdatum"
+
+    contacting:
+      subject: "Betreffzeile"
+      message: "Nachricht"
+
+  # Errors configuration
+  errors: &errors
+    format: "%{attribute} %{message}"
+
+    template:
+      body: "Bitte überprüfe die folgenden Felder:"
+
+      header:
+        one: "Verarbeitung der Formulardaten fehlgeschlagen. Ein Fehler:"
+        other: "Verarbeitung der Formulardaten fehlgeschlagen. %{count} Fehler:"
+
+    messages:
+      accepted: "muss akzeptiert werden"
+      blank: "muss ausgefüllt werden"
+      confirmation: "stimmt nicht mit der Bestätigung überein"
+      empty: "muss ausgefüllt werden"
+      equal_to: "muss genau %{count} sein"
+      even: "muss gerade sein"
+      exclusion: "ist nicht verfügbar"
+      greater_than: "muss größer als %{count} sein"
+      greater_than_or_equal_to: "muss größer oder gleich %{count} sein"
+      inclusion: "ist kein gültiger Wert"
+      invalid: "ist nicht gültig"
+      less_than: "muss kleiner als %{count} sein"
+      less_than_or_equal_to: "muss kleiner oder gleich %{count} sein"
+      not_a_number: "ist keine Zahl"
+      not_an_integer: "muss ganzzahlig sein"
+      odd: "muss ungerade sein"
+      other_than: "darf nicht %{count} sein"
+      present: "muss leer sein"
+      record_invalid: "Gültigkeitsprüfung ist fehlgeschlagen: %{errors}"
+      taken: "ist bereits vergeben"
+      too_long: "ist zu lang (nicht mehr als %{count} Zeichen)"
+      too_short: "ist zu kurz (nicht weniger als %{count} Zeichen)"
+      wrong_length: "hat die falsche Länge (muss genau %{count} Zeichen haben)"
+      unrecognized: "wurde nicht erkannt"
+      # Append your own errors here or at the model/attributes scope.
+
+      restrict_dependent_destroy:
+        one: "Cannot delete record because a dependent %{record} exists"
+        many: "Cannot delete record because dependent %{record} exist"
+
+    # You can define own errors for models or model attributes.
+    # The values :model, :attribute and :value are always available for interpolation.
+    #
+    # For example,
+    #   models:
+    #     user:
+    #       blank: "This is a custom blank message for %{model}: %{attribute}"
+    #       attributes:
+    #         login:
+    #           blank: "This is a custom blank message for User login"
+    # Will define custom blank validation message for User model and
+    # custom blank validation message for login attribute of User model.
+    models:
+      session:
+        attributes:
+          base:
+            invalid: "Zugangsdaten ungültig!"
+
+  activerecord:
+    models:
+      <<: *models
+    attributes:
+      <<: *attributes
+    errors:
+      <<: *errors
+
+  activemodel:
+    models:
+      <<: *models
+    attributes:
+      <<: *attributes
+    errors:
+      <<: *errors
+

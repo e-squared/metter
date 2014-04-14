@@ -1,0 +1,33 @@
+en:
+  users:
+    created: "User successfully created."
+    updated: "User successfully updated."
+    deleted: "User successfully deleted."
+
+    index:
+      title: "Users"
+      headline: "Users"
+      login: "Login"
+      name: "Name"
+      new_user: "Add New User"
+      edit_user: "Edit"
+      delete_user: "Delete"
+      delete_confirm: "Are you sure?"
+      no_users: "No users found."
+
+    show:
+      login: "Login"
+      first_name: "First Name"
+      last_name: "Last Name"
+      edit_user: "Edit"
+      delete_user: "Delete"
+      delete_confirm: "Are you sure?"
+
+    new:
+      title: "New User"
+      headline: "Add a New User"
+
+    edit:
+      title: "Edit User"
+      headline: "Edit User"
+

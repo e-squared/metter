@@ -1,0 +1,61 @@
+de:
+  people:
+    created: "Person erfolgreich erstellt."
+    updated: "Person erfolgreich aktualisiert."
+    deleted: "Person erfolgreich gelöscht."
+
+    index:
+      title: "Personen"
+      headline: "Personen"
+      image: "Bild"
+      name: "Name"
+      description: "Beschreibung"
+      name_and_description: "Name / Beschreibung"
+      biographical_data: "Lebensdaten"
+      born: "Geboren"
+      died: "Gestorben"
+      alternative_names: "Auch bekannt als"
+      rank: "Suchrang"
+      new_person: "Neue Person erstellen"
+      edit_person: "Bearbeiten"
+      delete_person: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du diese Person löschen möchtest?"
+      show_wikipedia_page: "Wikipedia-Seite"
+      no_people: "Keine Personen gefunden."
+      born_with_place: "%{date} in %{place}"
+      died_with_age: "%{date} (im Alter von %{age} Jahren)"
+      died_with_place_and_age: "%{date} in %{place} (im Alter von %{age} Jahren)"
+      find_person: "Person finden"
+
+    show:
+      name: "Name"
+      description: "Beschreibung"
+      born: "Geboren"
+      died: "Gestorben"
+      alternative_names: "Auch bekannt als"
+      rank: "Suchrang"
+      edit_person: "Bearbeiten"
+      delete_person: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du diese Person löschen möchtest?"
+      show_wikipedia_page: "Wikipedia-Seite"
+      born_with_place: "%{date} in %{place}"
+      died_with_age: "%{date} (im Alter von %{age} Jahren)"
+      died_with_place_and_age: "%{date} in %{place} (im Alter von %{age} Jahren)"
+
+    new:
+      title: "Neue Person"
+      headline: "Neue Person erstellen"
+
+    create:
+      born_with_place: "%{date} in %{place}"
+      died_with_age: "%{date} (im Alter von %{age} Jahren)"
+      died_with_place_and_age: "%{date} in %{place} (im Alter von %{age} Jahren)"
+
+    edit:
+      title: "Person bearbeiten"
+      headline: "Person bearbeiten"
+
+    form:
+      alternative_names_add: "Weiteres Namensfeld hinzufügen"
+      alternative_names_remove: "Namensfeld entfernen"
+

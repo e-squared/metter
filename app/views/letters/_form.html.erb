@@ -1,0 +1,120 @@
+<%= form_for @letter, :html => { :class => "form-letter" } do |f| %>
+  <%= f.validation_errors %>
+
+  <%= f.input :sender_name %>
+  <%= f.input :sender_address %>
+  <%= f.input :recipient_name %>
+  <%= f.input :recipient_address %>
+  <%= f.input :date_of_writing %>
+  <%= f.input :summary, :as => :text_area %>
+
+  <%= f.buttons :cancel => false %>
+<% end %>
+
+<div id="new-person-dialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="new-person-headline" aria-hidden="true">
+  <%= form_for Person.new, :remote => true, :format => "json", :html => { :class => "form-horizontal form-person-popup" } do |f| %>
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="new-person-headline"><%=t ".add_new_person" %></h3>
+    </div>
+
+    <div class="modal-body">
+      <%= f.input :name, :class => "span4" %>
+      <%= f.input :description, :class => "span4" %>
+      <%= f.input :unformatted_date_of_birth, :class => "span3" %>
+      <%= f.input :place_of_birth, :class => "span3" %>
+      <%= f.input :unformatted_date_of_death, :class => "span3" %>
+      <%= f.input :place_of_death, :class => "span3" %>
+      <%= f.input :alternative_names, :as => :text_fields, :class => "span3" %>
+      <%= f.input :viaf_identifier, :class => "span2" %>
+      <%= f.input :lccn_identifier, :class => "span2" %>
+      <%= f.input :gnd_identifier, :class => "span2" %>
+      <%= f.input :wikipedia_identifier, :class => "span2" %>
+    </div>
+
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" id="btn-create-person"><%=t ".create_person" %></button>
+      <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t :cancel %></button>
+    </div>
+  <% end %>
+</div>
+
+<div id="date-help-dialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="date-help-headline" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="date-help-headline"><%=t ".help_on_entering_dates" %></h3>
+  </div>
+
+  <div class="modal-body"></div>
+
+  <div class="modal-footer">
+    <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true"><%=t :close %></button>
+  </div>
+</div>
+
+<div id="date-adjust-dialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="date-adjust-headline" aria-hidden="true">
+  <form method="post" class="form-date-adjust">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="new-person-headline"><%=t ".edit_dating" %></h3>
+    </div>
+
+    <div class="modal-body"></div>
+
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" id="btn-create-person"><%=t ".apply_dating" %></button>
+      <button class="btn" data-dismiss="modal" aria-hidden="true"><%=t :cancel %></button>
+    </div>
+  </form>
+</div>
+
+<script id="person-popover" type="text/x-mustache">
+  <div class="popover-person">
+    {{#imageUrl}}
+      <img src="{{imageUrl}}" class="photo">
+    {{/imageUrl}}
+    <p>{{{description}}}</p>
+    <p><b><%=t ".born" %>:</b><br>{{{born}}}</p>
+    {{#died}}
+      <p><b><%=t ".died" %>:</b><br>{{{died}}}</p>
+    {{/died}}
+  </div>
+</script>
+
+<script id="address-popover" type="text/x-mustache">
+  <table class="popover-address">
+    <tbody>
+      {{#address_components}}
+        <tr>
+          <th>{{{translated_type}}}:</th>
+          <td>{{long_name}}</td>
+        </tr>
+      {{/address_components}}
+    </tbody>
+  </table>
+</script>
+
+<script id="dating-popover" type="text/x-mustache">
+  <table class="popover-dating">
+    <tbody>
+      <tr>
+        <th><%=t ".dates" %>:</th>
+        <td>{{#formatted_dates}}<span>{{{.}}}</span>{{/formatted_dates}}</td>
+      </tr>
+      <tr>
+        <th><%=t ".sorting_date" %>:</th>
+        <td>{{formatted_sorting_date}}</td>
+      </tr>
+      <tr>
+        <th><%=t ".certainty" %>:</th>
+        <td>{{certainty}}%</td>
+      </tr>
+      <tr>
+        <th><%= t ".comment" %>:</th>
+        <td>{{#comment}}{{comment}}{{/comment}}{{^comment}}--{{/comment}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><%=t ".click_on_green_icon_to_edit_dating" %></p>
+</script>

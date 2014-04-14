@@ -1,0 +1,111 @@
+<div class="control-group">
+  <%= label_tag :query, t(".date_of_writing"), :class => "control-label" %>
+
+  <div class="controls">
+    <%= text_field_tag :query, params[:query], :class => "span6" %>
+  </div>
+</div>
+
+<div class="control-group control-dates">
+  <%= label_tag :recognized, t(".recognized_dates"), :class => "control-label" %>
+
+  <div class="controls">
+    <table>
+      <tbody>
+        <% if @dating.dates.any? %>
+          <% @dating.dates.each do |date| %>
+            <tr>
+              <td>
+                <% if date.is_a?(Range) %>
+                  <%= text_field_tag "dates[][first]", l(date.first, :format => :datepicker), :class => "span2 datepicker", :id => nil %>
+                  ...
+                  <%= text_field_tag "dates[][last]", l(date.last, :format => :datepicker), :class => "span2 datepicker", :id => nil %>
+                <% else %>
+                  <%= text_field_tag "dates[]", l(date, :format => :datepicker), :class => "span2 datepicker", :id => nil %>
+                <% end %>
+              </td>
+
+              <td>
+                <a href="#" class="remove-date" title="<%=t ".remove_this_dating" %>"><i class="icon-remove-sign"></i></a>
+              </td>
+            </tr>
+          <% end %>
+        <% else %>
+          <tr class="nothing-recognized">
+            <td><i><%=t ".no_recognized_datings" %></i></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <p><small>
+      <a href="#" class="add-single-date"><%=t ".add_single_date" %></a>
+      oder
+      <a href="#" class="add-date-range"><%=t ".add_date_range" %></a>
+    </small></p>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= label_tag :sorting_date, t(".date_for_chronological_sorting"), :class => "control-label" %>
+
+  <div class="controls">
+    <%= text_field_tag :sorting_date, @dating.sorting_date && l(@dating.sorting_date, :format => :datepicker), :class => "span2 datepicker" %>
+  </div>
+</div>
+
+<div class="control-group">
+  <label for="certainty" class="control-label"><%=t ".certainty" %>: <span class="certainty-percent"><%= @dating.certainty %>%</span></label>
+
+  <div class="controls">
+    <%= text_field_tag :certainty, @dating.certainty, :class => "span4 slider", :data => { :slider_max => 100, :slider_value => @dating.certainty } %>
+  </div>
+</div>
+
+<div class="control-group">
+  <%= label_tag :comment, t(".supplementary_notes"), :class => "control-label" %>
+
+  <div class="controls">
+    <%= text_area_tag :comment, @dating.comment, :class => "span6" %>
+  </div>
+</div>
+
+<script>
+
+  $(".slider").slider({
+    step: 5,
+    formatter: function(value) {
+      return '' + value + '%';
+    }
+  }).on("slideStop", function(e) {
+    $(this).val(e.value);
+    $(".certainty-percent").text(e.value + "%");
+  });
+
+  $(".datepicker").datepicker({ format: "<%=t ".datepicker.format" %>", weekStart: 1, language: "<%= ".datepicker.language" %>", autoclose: true });
+
+  $(document).on("click", "a.remove-date", function(e) {
+    $(this).closest("tr").remove();
+
+    return false;
+  });
+
+  $(".add-single-date").on("click", function() {
+    var tr = $('<tr><td><input type="text" value="" name="dates[]" class="span2 datepicker"></td><td><a title="<%=t ".remove_this_dating" %>" class="remove-date" href="#"><i class="icon-remove-sign"></i></a></td></tr>').appendTo(".control-dates tbody");
+
+    $("table .nothing-recognized").remove();
+    $(".datepicker", tr).datepicker({ format: "<%=t ".datepicker.format" %>", weekStart: 1, language: "<%= ".datepicker.language" %>", autoclose: true });
+
+    return false;
+  });
+
+  $(".add-date-range").on("click", function() {
+    var tr = $('<tr><td><input type="text" value="" name="dates[][first]" class="span2 datepicker"> ... <input type="text" value="" name="dates[][last]" class="span2 datepicker"></td><td><a title="<%=t ".remove_this_dating" %>" class="remove-date" href="#"><i class="icon-remove-sign"></i></a></td></tr>').appendTo(".control-dates tbody");
+
+    $("table .nothing-recognized").remove();
+    $(".datepicker", tr).datepicker({ format: "<%=t ".datepicker.format" %>", weekStart: 1, language: "<%= ".datepicker.language" %>", autoclose: true });
+
+    return false;
+  });
+
+</script>

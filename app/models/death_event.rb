@@ -1,0 +1,3 @@
+class DeathEvent < Event
+end
+

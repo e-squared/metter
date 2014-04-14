@@ -1,0 +1,3 @@
+class BirthEvent < Event
+end
+

@@ -1,0 +1,31 @@
+<div class="stored"></div>
+
+<% @people.each do |person| %>
+  <div style="width: 100px; height: 100px; display: inline-block;">
+    <%= link_to remove_person_image_path(person.id), :class => "remove-image", :rel => person.wikipedia_image_url do %>
+      <img src="<%= person.wikipedia_image_url %>" title="<%= person.wikipedia_image_url %>" style="max-width: 100px; max-height: 100px;">
+    <% end %>
+  </div>
+<% end %>
+
+<%= pagination_for @people %>
+
+<script>
+
+  $(function() {
+    var fuckedUpImages = JSON.parse(localStorage.fuckedUpImages || "[]");
+
+    $("div.stored").html(fuckedUpImages.uniq().sort().join("<br>"));
+
+    $(".remove-image").on("click", function() {
+      $.get(this.href);
+
+      fuckedUpImages.push(this.rel);
+      localStorage.fuckedUpImages = JSON.stringify(fuckedUpImages);
+
+      return false;
+    });
+  });
+
+</script>
+

@@ -1,0 +1,12 @@
+de:
+  session:
+    logged_in: "Hallo %{name}! Du hast dich erfolgreich eingeloggt."
+    logged_out: "Du hast dich erfolgreich ausgeloggt."
+
+    new:
+      title: "Einloggen"
+      headline: "Bitte logge dich ein"
+      login: "Username"
+      password: "Passwort"
+      log_in: "Einloggen"
+

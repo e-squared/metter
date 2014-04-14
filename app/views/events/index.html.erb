@@ -1,0 +1,66 @@
+<%= headline_tag do %>
+  <form action="/events" method="get">
+    <div class="input-append search-container">
+      <input type="text" name="query" value="<%= params[:query] %>" class="span3 eventpicker" placeholder="<%=t ".find_event" %>">
+      <button type="submit" class="btn"><i class="icon-search"></i></button>
+      <%= new_link :event %>
+    </div>
+  </form>
+<% end %>
+
+<% if @events.any? %>
+  <table class="table table-striped table-bordered table-people">
+    <tbody>
+      <tr>
+        <th><%=t :type %></th>
+        <th><%=t ".date" %></th>
+        <th><%=t ".description" %></th>
+        <th><%=t :actions %></th>
+      </tr>
+
+      <% @events.each do |event| %>
+        <tr>
+          <td><%=tt event %></td>
+          <td><%=l event.date, :format => :long %></td>
+          <td><%= show_link event, :text => event.description %></td>
+
+          <td>
+            <%= edit_link event %>
+            <%= delete_link event %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= pagination_for @events %>
+<% else %>
+  <div class="well centered">
+    <%=t ".no_events" %>
+  </div>
+<% end %>
+
+<script>
+
+  $(function() {
+    $('input.eventpicker').typeahead([{
+      name: 'events',
+      remote: {
+        url: '/events/search/%QUERY.json',
+        rateLimitWait: 75
+      },
+      template: [
+        '<p class="event-type">{{type}}</p>',
+        '<p class="event-date">{{date}}</p>',
+        '<p class="event-description">{{{description}}}</p>'
+      ].join(''),
+      engine: Hogan,
+      limit: 10
+    }]).on('typeahead:selected', function(e, datum) {
+      location.href = '/events/' + datum.token;
+      return false;
+    });
+  });
+
+</script>
+

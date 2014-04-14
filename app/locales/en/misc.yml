@@ -1,0 +1,53 @@
+en:
+  language: "English"
+  app_name: "Letter Metadata Prototype"
+  cancel: "Cancel"
+  close: "Close"
+  error: "Error"
+  created: "Created"
+  updated: "Last Updated"
+  actions: "Actions"
+  edit: "Edit"
+  delete: "Delete"
+  today: "Today"
+  yesterday: "Yesterday"
+  tomorrow: "Tomorrow"
+  please_wait: "Please wait..."
+  not_assigned: "n/a"
+  remove: "Remove"
+  submit: "Submit"
+  type: "Type"
+
+  i18n:
+    transliterate:
+      rule:
+        ä: "ae"
+        ö: "oe"
+        ü: "ue"
+        Ä: "Ae"
+        Ö: "Oe"
+        Ü: "Ue"
+        ß: "ss"
+
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Previous"
+      next: "Next &rsaquo;"
+      truncate: "..."
+
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "No entries found"
+          one: "Showing <b>1</b> entry"
+          other: "Showing <b>all %{count}</b> entries"
+      more_pages:
+        display_entries: "Showing entries <b>%{first} to %{last}</b> of <b>%{total}</b> in total"
+
+  united_states:
+    administrative_area_level_1: "State"
+    administrative_area_level_2: "County"
+

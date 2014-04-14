@@ -1,0 +1,20 @@
+en:
+  layouts:
+    application:
+      home_page: "Home"
+      edit_profile: "Edit Profile"
+      logged_in_as_html: "Logged in as %{as}."
+      log_out: "Log out"
+      language: "Language"
+      german: "Deutsch"
+      english: "English"
+      nav:
+        users: "Users"
+        people: "People"
+        events: "Events"
+        letters: "Letters"
+        about: "About"
+        contact: "Contact Us"
+        profile: "My Profile"
+        logout: "Log out"
+

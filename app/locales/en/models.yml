@@ -1,0 +1,143 @@
+en:
+  # Translate model names. Used in Model.human_name().
+  models: &models
+    user: "user"
+    session: "Session"
+    person: "Person"
+    event: "Event"
+    letter: "Letter"
+    contacting: "Contacting"
+
+  # Attributes configuration
+  attributes: &attributes
+    # Attributes names common to most models
+    type: "Type"
+    name: "Name"
+    title: "Title"
+    email: "Email Address"
+    description: "Description"
+    summary: "Summary"
+    created_at: "Created at"
+    updated_at: "Updated at"
+
+    # Translate model attribute names. Used in Model.human_attribute_name(attribute).
+    user:
+      first_name: "First Name"
+      last_name: "Last Name"
+      login: "Login"
+      password: "New Password"
+      password_confirmation: "Confirm Password"
+      locale: "Language"
+
+    session:
+      login: "Login"
+      password: "Password"
+      base: "Login or Password"
+
+    person:
+      date_of_birth: "Date of Birth"
+      unformatted_date_of_birth: "Date of Birth"
+      place_of_birth: "Place of Birth"
+      date_of_death: "Date of Death"
+      unformatted_date_of_death: "Date of Death"
+      place_of_death: "Place of Death"
+      alternative_names: "Also known as"
+      wikipedia_identifier: "Wikipedia Page ID"
+      viaf_identifier: "VIAF-ID"
+      gnd_identifier: "GND-ID"
+      lccn_identifier: "LCCN-ID"
+      rank: "Search Rank"
+      wikipedia_image_url: "Wikipedia Image URL"
+      wikipedia_about_html: "Wikipedia About HTML"
+
+    event:
+      date: "Date"
+
+    letter:
+      sender_name: "Sender"
+      sender_address: "Sender Location"
+      recipient_name: "Recipient"
+      recipient_address: "Recipient Location"
+      date_of_writing: "Date of Writing"
+      summary: "Content Summary"
+
+    contacting:
+      subject: "Subject"
+      message: "Message"
+
+  # Errors configuration
+  errors: &errors
+    format: "%{attribute} %{message}"
+
+    template:
+      body: "Bitte überprüfe die folgenden Felder:"
+
+      header:
+        one: "Verarbeitung der Formulardaten fehlgeschlagen. Ein Fehler:"
+        other: "Verarbeitung der Formulardaten fehlgeschlagen. %{count} Fehler:"
+
+    messages:
+      accepted: "must be accepted"
+      blank: "can't be blank"
+      confirmation: "doesn't match %{attribute}"
+      empty: "can't be empty"
+      equal_to: "must be equal to %{count}"
+      even: "must be even"
+      exclusion: "is reserved"
+      greater_than: "must be greater than %{count}"
+      greater_than_or_equal_to: "must be greater than or equal to %{count}"
+      inclusion: "is not included in the list"
+      invalid: "is invalid"
+      less_than: "must be less than %{count}"
+      less_than_or_equal_to: "must be less than or equal to %{count}"
+      not_a_number: "is not a number"
+      not_an_integer: "must be an integer"
+      odd: "must be odd"
+      other_than: "must be other than %{count}"
+      present: "must be blank"
+      record_invalid: "Validation failed: %{errors}"
+      taken: ist bereits vergeben
+      too_long: "is too long (maximum is %{count} characters)"
+      too_short: "is too short (minimum is %{count} characters)"
+      wrong_length: "is the wrong length (should be %{count} characters)"
+      unrecognized: "could not be recognized"
+      # Append your own errors here or at the model/attributes scope.
+
+      restrict_dependent_destroy:
+        one: "Cannot delete record because a dependent %{record} exists"
+        many: "Cannot delete record because dependent %{record} exist"
+
+    # You can define own errors for models or model attributes.
+    # The values :model, :attribute and :value are always available for interpolation.
+    #
+    # For example,
+    #   models:
+    #     user:
+    #       blank: "This is a custom blank message for %{model}: %{attribute}"
+    #       attributes:
+    #         login:
+    #           blank: "This is a custom blank message for User login"
+    # Will define custom blank validation message for User model and
+    # custom blank validation message for login attribute of User model.
+    models:
+      session:
+        attributes:
+          base:
+            invalid: "Invalid Credentials!"
+
+  activerecord:
+    models:
+      <<: *models
+    attributes:
+      <<: *attributes
+    errors:
+      <<: *errors
+
+  activemodel:
+    models:
+      <<: *models
+    attributes:
+      <<: *attributes
+    errors:
+      <<: *errors
+

@@ -1,0 +1,33 @@
+de:
+  users:
+    created: "Benutzer erfolgreich erstellt."
+    updated: "Benutzer erfolgreich aktualisiert."
+    deleted: "Benutzer erfolgreich gelöscht."
+
+    index:
+      title: "Benutzer"
+      headline: "Benutzer"
+      login: "Username"
+      name: "Name"
+      new_user: "Neuen Benutzer erstellen"
+      edit_user: "Bearbeiten"
+      delete_user: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du diesen Benutzer löschen möchtest?"
+      no_users: "Keine Benutzer vorhanden."
+
+    show:
+      login: "Username"
+      first_name: "Vorname"
+      last_name: "Nachname"
+      edit_user: "Bearbeiten"
+      delete_user: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du diesen Benutzer löschen möchtest?"
+
+    new:
+      title: "Neuer Benutzer"
+      headline: "Neuen Benutzer erstellen"
+
+    edit:
+      title: "Benutzer bearbeiten"
+      headline: "Benutzer bearbeiten"
+

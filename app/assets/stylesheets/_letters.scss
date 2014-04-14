@@ -1,0 +1,294 @@
+body.letters-new {
+  background-color: #F5F5F5;
+}
+
+div.intro p {
+  color: #666;
+}
+
+.form-person {
+  label {
+    margin-bottom: 0;
+  }
+
+  .input-multiple {
+    margin-bottom: 20px;
+  }
+}
+
+.form-letter {
+  margin-top: 20px;
+
+  .control-group {
+    margin-bottom: 4px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 1px;
+    cursor: default;
+    width: 350px;
+  }
+
+  .control-sender_name, .control-recipient_name {
+  }
+
+  .control-summary {
+    textarea {
+      height: 80px;
+    }
+  }
+
+  .control-buttons {
+    margin-top: 10px;
+  }
+
+  span.twitter-typeahead {
+    margin-bottom: 10px;
+  }
+}
+
+.tt-dataset-people-sender, .tt-dataset-people-recipient {
+  p.person-name {
+    font-size: 16px;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  p.person-description, p.person-years {
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+    line-height: 1.1;
+  }
+
+  p.person-years {
+    float: right;
+    margin-top: 2px;
+  }
+
+  .tt-suggestion {
+    &.tt-is-under-cursor {
+      p.person-description, p.person-years {
+        color: lighten($dropdownLinkBackgroundHover, 70%)
+      }
+    }
+  }
+}
+
+.tt-dataset-places-sender, .tt-dataset-places-recipient {
+  p.address {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+}
+
+.dp-dataset-dating-dateofwriting {
+  .header {
+    position: fixed;
+    top: 11px;
+    margin: 0 -20px 20px -20px;
+    padding: 10px 20px;
+    background-color: #DDD;
+    border-bottom: solid 1px #CCC;
+
+    span, label {
+      display: inline-block;
+      margin: 0 12px 0 0;
+      font-size: 13px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    span {
+      font-weight: bold;
+    }
+
+    input {
+      margin: 0;
+    }
+  }
+
+  .dp-events {
+    padding-top: 42px;
+  }
+
+  .dp-event {
+    h4 {
+      border-bottom: 1px solid #CCCCCC;
+      font-size: 14px;
+      margin: 0 0 5px 0;
+    }
+
+    ul {
+      margin: 0 0 20px 20px;
+    }
+
+    li {
+      font-size: 13px;
+      line-height: 15px;
+      margin-bottom: 2px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.icon-input {
+  color: #666;
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 2px 0 0 5px;
+  position: relative;
+  text-shadow: 1px 1px 3px #ccc;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.icon-input-success {
+  color: green;
+}
+
+.icon-input-error {
+  color: red;
+}
+
+.icon-input-wait {
+  animation: 2s linear 0s normal none infinite spin;
+  display: inline-block;
+}
+
+.icon-input-hidden {
+  display: none;
+}
+
+.popover-person {
+  p {
+    font-size: 13px;
+    line-height: 1.2;
+
+    &:last-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  ul {
+    margin: -10px 0 5px 15px;
+  }
+
+  li {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  img.photo {
+    width: 60px;
+    margin: 3px 10px 10px 0;
+    float: left;
+  }
+}
+
+.popover-address {
+  th, td {
+    font-size: 13px;
+    margin: 0;
+    padding: 2px 0;
+    line-height: 14px;
+  }
+
+  th {
+    font-weight: normal;
+    font-style: italic;
+    padding-right: 8px;
+    text-align: right;
+    width: 40%;
+  }
+
+  td {
+    /*white-space: nowrap;*/
+    width: 60%;
+  }
+}
+
+.popover-dating {
+  margin-bottom: 10px;
+
+  th, td {
+    font-size: 14px;
+    margin: 0;
+    padding: 5px 0;
+    line-height: 14px;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: normal;
+    font-style: italic;
+    padding-right: 8px;
+    text-align: left;
+  }
+
+  td {
+    /*white-space: nowrap;*/
+
+    span {
+      display: block;
+      margin-bottom: 4px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.date-help-category {
+  thead th {
+    background-color: #F5F5F5;
+  }
+
+  th, td {
+    font-size: 12px;
+  }
+
+  td + td {
+    white-space: nowrap;
+  }
+}
+
+.form-date-adjust {
+  table {
+    margin-bottom: 7px;
+  }
+
+  table + p {
+    margin-bottom: 20px;
+  }
+
+  div.slider {
+    margin-bottom: 10px;
+  }
+
+  td {
+    padding-bottom: 3px;
+  }
+
+  td input {
+    margin-bottom: 0;
+  }
+
+  a.remove-date {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 15px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

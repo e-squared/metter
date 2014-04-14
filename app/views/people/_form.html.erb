@@ -1,0 +1,20 @@
+<%= form_for @person, :html => { :class => "form-horizontal well form-person" } do |f| %>
+  <%= f.validation_errors %>
+
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :date_of_birth, :as => :date_select, :start_year => 800, :end_year => Time.now.year, :max_years_allowed => 1300, :default => 50.years.ago.beginning_of_year.to_date %>
+  <%= f.input :place_of_birth %>
+  <%= f.input :date_of_death, :as => :date_select, :start_year => 800, :end_year => Time.now.year, :max_years_allowed => 1300, :include_blank => true %>
+  <%= f.input :place_of_death %>
+  <%= f.input :alternative_names, :as => :text_fields, :class => "span4" %>
+  <%= f.input :viaf_identifier, :class => "span2" %>
+  <%= f.input :lccn_identifier, :class => "span2" %>
+  <%= f.input :gnd_identifier, :class => "span2" %>
+  <%= f.input :wikipedia_identifier, :class => "span2" %>
+  <%= f.input :wikipedia_image_url %>
+  <%= f.input :wikipedia_about_html %>
+  <%= f.input :rank, :class => "span1" %>
+
+  <%= f.buttons %>
+<% end %>

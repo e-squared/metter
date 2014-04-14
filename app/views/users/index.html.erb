@@ -1,0 +1,36 @@
+<%= headline_tag do %>
+  <%= new_link :user %>
+<% end %>
+
+<% if @users.any? %>
+  <table class="table table-striped table-bordered">
+    <tbody>
+      <tr>
+        <th><%=t ".login" %></th>
+        <th><%=t ".name" %></th>
+        <th><%=t :created %></th>
+        <th><%=t :updated %></th>
+        <th><%=t :actions %></th>
+      </tr>
+
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= show_link user, :text => user.login %></td>
+          <td><%= user.name %></td>
+          <td><%= time_tag user.created_at %></td>
+          <td><%= time_tag user.updated_at %></td>
+
+          <td>
+            <%= edit_link user %>
+            <%= delete_link user unless user.admin? %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="well centered">
+    <%=t ".no_users" %>
+  </div>
+<% end %>
+

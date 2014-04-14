@@ -1,0 +1,63 @@
+.table-events {
+  td {
+    line-height: 1.1;
+  }
+
+  td.smaller {
+    font-size: $baseFontSize - 1px;
+  }
+}
+
+.dl-event {
+  margin-bottom: 15px;
+
+  dd {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form-event {
+  .control-date {
+    select {
+      width: inherit;
+    }
+  }
+
+  .control-description {
+    textarea {
+      height: 120px;
+    }
+  }
+}
+
+.tt-dataset-events {
+  p.event-date {
+    font-size: 16px;
+    line-height: 1.1;
+    margin-bottom: 2px;
+  }
+
+  p.event-description, p.event-type {
+    font-size: 12px;
+    font-weight: normal;
+    color: #666;
+    line-height: 1.1;
+  }
+
+  p.event-type {
+    float: right;
+    margin-top: 2px;
+  }
+
+  .tt-suggestion {
+    &.tt-is-under-cursor {
+      p.event-description, p.event-type {
+        color: lighten($dropdownLinkBackgroundHover, 70%)
+      }
+    }
+  }
+}

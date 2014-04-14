@@ -1,0 +1,61 @@
+en:
+  people:
+    created: "Person successfully created."
+    updated: "Person successfully updated."
+    deleted: "Person successfully deleted."
+
+    index:
+      title: "People"
+      headline: "People"
+      image: "Picture"
+      name: "Name"
+      description: "Description"
+      name_and_description: "Name / Description"
+      biographical_data: "Biographical Data"
+      born: "Born"
+      died: "Died"
+      alternative_names: "Alternative Names"
+      rank: "Search Rank"
+      new_person: "Add New Person"
+      edit_person: "Edit"
+      delete_person: "Delete"
+      delete_confirm: "Are you sure?"
+      show_wikipedia_page: "Wikipedia"
+      no_people: "No person found."
+      born_with_place: "%{date} in %{place}"
+      died_with_age: "%{date} (at age %{age})"
+      died_with_place_and_age: "%{date} in %{place} (at age %{age})"
+      find_person: "Find a person"
+
+    show:
+      name: "Name"
+      description: "Description"
+      born: "Born"
+      died: "Died"
+      alternative_names: "Alternative Names"
+      rank: "Search Rank"
+      edit_person: "Edit"
+      delete_person: "Delete"
+      delete_confirm: "Are you sure?"
+      show_wikipedia_page: "Show Wikipedia Article"
+      born_with_place: "%{date} in %{place}"
+      died_with_age: "%{date} (at age %{age})"
+      died_with_place_and_age: "%{date} in %{place} (at age %{age})"
+
+    new:
+      title: "New Person"
+      headline: "Add a New Person"
+
+    create:
+      born_with_place: "%{date} in %{place}"
+      died_with_age: "%{date} (at age %{age})"
+      died_with_place_and_age: "%{date} in %{place} (at age %{age})"
+
+    edit:
+      title: "Edit Person"
+      headline: "Edit Person"
+
+    form:
+      alternative_names_add: "Add another name field"
+      alternative_names_remove: "Remove this field"
+

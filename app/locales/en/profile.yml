@@ -1,0 +1,13 @@
+en:
+  profile:
+    updated: "You successfully updated your profile."
+
+    index:
+      title: "Home"
+      headline: "Welcome!"
+
+    edit:
+      title: "My Profile"
+      headline: "My Profile"
+      update_profile: "Update profile"
+

@@ -1,0 +1,11 @@
+DATABASE_URL=postgres://username:password@example.org/metter?encoding=unicode&pool=5
+SECRET_TOKEN=abcdef123456
+WIKIPEDIA_PAGE_URL_TEMPLATE=http://en.wikipedia.org/?curid=%s
+GND_PAGE_URL_TEMPLATE=http://d-nb.info/gnd/%s
+VIAF_PAGE_URL_TEMPLATE=http://viaf.org/viaf/%s
+LCCN_PAGE_URL_TEMPLATE=http://id.loc.gov/authorities/names/%s
+WORLDCAT_PAGE_URL_TEMPLATE=http://www.worldcat.org/identities/lccn-%s
+WIKIPEDIA_API_URL_TEMPLATE=http://en.wikipedia.org/w/api.php?%s
+RAILS_ENV=development
+CONTACT_SENDER_EMAIL=me@example.org
+CONTACT_RECIPIENT_EMAIL=me@example.org

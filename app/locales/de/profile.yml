@@ -1,0 +1,13 @@
+de:
+  profile:
+    updated: "Profildaten erfolgreich aktualisiert."
+
+    index:
+      title: "Startseite"
+      headline: "Willkommen!"
+
+    edit:
+      title: "Mein Profil"
+      headline: "Mein Profil"
+      update_profile: "Profil aktualisieren"
+

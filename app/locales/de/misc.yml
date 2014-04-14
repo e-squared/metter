@@ -1,0 +1,53 @@
+de:
+  language: "Deutsch"
+  app_name: "Brief-Metadaten-Prototyp"
+  cancel: "Abbrechen"
+  close: "Schließen"
+  error: "Fehler"
+  created: "Erstellt am"
+  updated: "Letzte Änderung"
+  actions: "Aktionen"
+  edit: "Bearbeiten"
+  delete: "Löschen"
+  today: "Heute"
+  yesterday: "Gestern"
+  tomorrow: "Morgen"
+  please_wait: "Bitte warten..."
+  not_assigned: "--"
+  remove: "Entfernen"
+  submit: "Absenden"
+  type: "Typ"
+
+  i18n:
+    transliterate:
+      rule:
+        ä: "ae"
+        ö: "oe"
+        ü: "ue"
+        Ä: "Ae"
+        Ö: "Oe"
+        Ü: "Ue"
+        ß: "ss"
+
+  views:
+    pagination:
+      first: "&laquo; Erste"
+      last: "Letzte &raquo;"
+      previous: "&lsaquo; Vorherige"
+      next: "Nächste &rsaquo;"
+      truncate: "..."
+
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "Keine Einträge gefunden"
+          one: "Zeige <b>1</b> Eintrag"
+          other: "Zeige <b>alle %{count}</b> Einträge"
+      more_pages:
+        display_entries: "Zeige <b>%{first} bis %{last}</b> von insgesamt <b>%{total}</b> Einträgen"
+
+  united_states:
+    administrative_area_level_1: "Bundesstaat"
+    administrative_area_level_2: "County"
+

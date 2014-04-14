@@ -1,0 +1,3 @@
+class HistoryEvent < Event
+end
+

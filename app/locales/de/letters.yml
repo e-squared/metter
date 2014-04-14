@@ -1,0 +1,163 @@
+de:
+  letters:
+    created: "Brief erfolgreich erstellt."
+    updated: "Brief erfolgreich aktualisiert."
+    deleted: "Brief erfolgreich gelöscht."
+
+    index:
+      title: "Briefe"
+      headline: "Briefe"
+      new_letter: "Neuer Brief"
+      edit_letter: "Bearbeiten"
+      delete_letter: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du diesen Brief löschen möchtest?"
+      no_letters: "Keine Briefe gefunden."
+      find_letter: "Brief finden"
+      sender: "Absender"
+      recipient: "Empfänger"
+      date_of_writing: "Schreibdatum"
+      summary: "Zusammenfassung"
+
+    show:
+      edit_letter: "Bearbeiten"
+      delete_letter: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du diesen Brief löschen möchtest?"
+      sender: "Absender"
+      recipient: "Empfänger"
+      date_of_writing: "Schreibdatum"
+      summary: "Zusammenfassung"
+
+    new:
+      title: "Neuer Brief"
+      headline: "Neuen Brief erfassen"
+      intro_html: |-
+        <p>
+          Der <em>Brief-Metadaten-Prototyp</em> ist ein web-basiertes Werkzeug für
+          die Erfassung von Korrespondenz-Metadaten, welches den Fokus auf
+          Benutzerfreundlichkeit und Effizienz legt. Diese Machbarkeitsstudie ist
+          Teil eines laufenden Forschungsprojekts und wird ständig weiterentwickelt.
+          Gerne können Sie uns Ihre <a href="%{contact_url}">Kommentare, Fragen oder
+          Anregungen</a> bezüglich Ihrer Erfahrungen im Umgang mit unserem Werkzeug
+          zukommen lassen.
+        </p>
+        <p>
+          Bitte beachten Sie, dass dies nur ein Prototyp ist. Demzufolge werden
+          keine Daten gespeichert, wenn Sie das Formular absenden.
+        </p>
+
+    edit:
+      title: "Brief bearbeiten"
+      headline: "Brief bearbeiten"
+
+    form:
+      alternative_names_add: "Weiteres Namensfeld hinzufügen"
+      alternative_names_remove: "Namensfeld entfernen"
+      add_new_person: "Neue Person hinzufügen"
+      create_person: "Person erstellen"
+      help_on_entering_dates: "Hilfe zur Datumseingabe"
+      edit_dating: "Datierung bearbeiten"
+      apply_dating: "Datierung übernehmen"
+      born: "Geboren"
+      died: "Gestorben"
+      source: "Quelle"
+      alternative_names: "Alternative Namen"
+      authority_control: "Normdateien"
+      dates: "Datumsangabe(n)"
+      sorting_date: "Sortierdatum"
+      certainty: "Gewissheit"
+      comment: "Anmerkungen"
+      click_on_green_icon_to_edit_dating: "Klicke auf das grüne Icon, um diese Datierung zu bearbeiten."
+      address_component_types:
+        street_address: "Adresse" # gibt eine präzise Straßenadresse an.
+        route: "Straße" # gibt eine Straße mit einer Bezeichnung an, z. B. "B1".
+        intersection: "Kreuzung" # gibt eine größere Kreuzung, üblicherweise von zwei Hauptstraßen, an.
+        political: "Politische Einheit" # gibt eine politische Einheit an. Normalerweise zeigt dieser Typ ein Polygon an, das einer öffentlichen Verwaltungseinheit entspricht.
+        country: "Land" # zeigt eine staatliche politische Einheit, ein Land, an und ist normalerweise der Typ mit dem höchsten Rang, der vom Geocodierer zurückgegeben wird.
+        administrative_area_level_1: "Verwaltungseinheit" # zeigt eine erstrangige öffentliche Verwaltungseinheit unterhalb der Landesebene an. In den USA entspricht diese Verwaltungsebene den Bundesstaaten. Diese Verwaltungsebenen gibt es nicht in allen Ländern.
+        administrative_area_level_2: "Verwaltungseinheit zweiten&nbsp;Grades" # zeigt eine zweitrangige öffentliche Verwaltungseinheit unterhalb der Länderebene an. In den USA entspricht diese Verwaltungsebene den Countys (Landkreisen). Diese Verwaltungsebenen gibt es nicht in allen Ländern.
+        administrative_area_level_3: "Verwaltungseinheit dritten&nbsp;Grades" # zeigt eine drittrangige öffentliche Verwaltungseinheit unterhalb der Länderebene an. Dieser Typ entspricht einem kleineren öffentlichen Bezirk. Diese Verwaltungsebenen gibt es nicht in allen Ländern.
+        colloquial_area: "Einheit (umgangssprachlich)" # zeigt eine allgemein gebräuchliche alternative Bezeichnung für die Einheit an.
+        locality: "Ort" # zeigt die politische Einheit einer Stadt oder Gemeinde an.
+        sublocality: "Ortsteil" # zeigt ein erstrangige öffentliche Verwaltungseinheit unterhalb der Ebene einer Stadt an.
+        neighborhood: "Stadtviertel" # zeigt ein benanntes Stadtviertel an.
+        premise: "Gebäudekomplex" # zeigt einen benannten Standort an, normalerweise ein einzelnes Gebäude oder einen Gebäudekomplex mit einem gemeinsamen Namen.
+        subpremise: "Gebäude" # zeigt eine erstrangige Einheit unterhalb der Ebene eines benannten Standorts an, normalerweise ein einzelnes Gebäude innerhalb eines Gebäudekomplexes mit einem gemeinsamen Namen.
+        postal_code: "Postleitzahl" # gibt eine Postleitzahl an, wie sie zum Adressieren von Postsendungen innerhalb des Landes verwendet wird.
+        natural_feature: "Landschaftsmerkmal" # zeigt ein auffallendes Landschaftsmerkmal an.
+        airport: "Flughafen" # zeigt einen Flughafen an.
+        park: "Park" # zeigt einen benannten Park an.
+        point_of_interest: "Point of Interest" # zeigt einen benannten interessanten Ort (POI) an. Diese POIs sind normalerweise markante lokale Entitäten, die nicht ohne weiteres in eine andere Kategorie passen, etwa "Empire State Building" oder "Freiheitsstatue".
+        post_box: "Briefkasten" # gibt einen bestimmten Briefkasten an.
+        street_number: "Hausnummer" # gibt die exakte Hausnummer an.
+        floor: "Stockwerk" # gibt das Stockwerk innerhalb einer Gebäudeadresse an.
+        room: "Raum" # gibt den Raum innerhalb einer Gebäudeadresse an.
+        establishment: "Anlage"
+        latitude: "Latitude"
+        longitude: "Longitude"
+      filter: "Filter"
+      history: "Geschichte"
+      births: "Geburt"
+      deaths: "Tod"
+      holidays: "Feiertag"
+      address: "Adresse"
+      dating: "Datierung"
+      unrecognized_name_html: "<p>Der eingegebene Name wurde keiner gespeicherten Person zugeordnet.</p><p>Klicke auf das grüne Icon, um eine neue Person hinzuzufügen.</p>"
+      unrecognized_address_html: "Adresse wurde nicht erkannt."
+      unrecognized_dating_html: "<p>Die eingegebene Datierung wurde nicht erkannt.</p><p>Klicke auf das rote Icon, um Hilfestellung zu erhalten.</p>"
+      sender_and_recipient_are_the_same_person: "Absender und Empfänger sind ein und dieselbe Person."
+      sender_was_born_after_recipient_died: "Das Geburtsdatum des Absenders ist später als das Todesdatum des Empfängers."
+      sender_died_before_recipient_was_born: "Das Todesdatum des Absenders ist früher als das Geburtsdatum des Empfängers."
+      recipient_and_sender_are_the_same_person: "Empfänger und Absender sind ein und dieselbe Person."
+      recipient_was_born_after_sender_died: "Das Geburtsdatum des Empfängers ist später als das Todesdatum des Absenders."
+      recipient_died_before_sender_was_born: "Das Todesdatum des Empfängers ist früher als das Geburtsdatum des Absenders."
+      sender_was_born_after_date_of_writing: "Das Geburtsdatum des Absenders ist später als das Schreibdatum."
+      sender_died_before_date_of_writing: "Das Todesdatum des Absender ist früher als das Schreibdatum."
+
+    dating_adjust:
+      date_of_writing: "Schreibdatum"
+      recognized_dates: "Erkannte Datumsangabe(n)"
+      remove_this_dating: "Entfernen"
+      add_single_date: "Einzeldatum hinzufügen"
+      add_date_range: "Zeitspanne hinzufügen"
+      no_recognized_datings: "Keine Datumsangabe(n) erkannt."
+      date_for_chronological_sorting: "Datum für die chronologische Einsortierung"
+      certainty: "Gewissheit"
+      supplementary_notes: "Ergänzende Anmerkungen"
+      datepicker:
+        format: "dd.mm.yyyy"
+        language: "de"
+
+    dating_help:
+      about_html: |-
+        <p>
+          Die nachfolgenden Übersicht zeigt anhand von Beispielen, wie
+          Datierungen eingegeben werden können. Auf der linken Seite
+          sind die Eingaben zu sehen; rechts davon die jeweilige
+          erkannte Datierung.
+        </p>
+
+        <p style="margin-bottom: 20px;">
+          Sollte keine dieser Eingaben dem ihnen zugrunde liegenden Format
+          entsprechen, können Sie natürlich auch die
+          <a href="/" class="switch-to-manual-date-entry">manuelle Datierung</a>
+          verwenden.
+        </p>
+
+
+      day_month_year: "Tag, Monat, Jahr"
+      month_year: "Monat, Jahr"
+      year: "Jahr"
+      beginning_middle_end_of_month: "Anfang/Mitte/Ende des Monats"
+      beginning_middle_end_of_year: "Anfang/Mitte/Ende des Jahres"
+      from_day_month_year_to_day_month_year: "von Tag, Monat, Jahr bis Tag, Monat, Jahr"
+      from_month_year_to_month_year: "von Monat, Jahr bis Monat, Jahr"
+      from_month_to_month_year: "von Monat bis Monat, Jahr"
+      from_day_to_day_month_year: "von Tag bis Tag, Monat, Jahr"
+      from_day_month_to_day_month_year: "von Tag, Monat bis Tag, Monat, Jahr"
+      holidays: "Feiertage"
+      sequences: "Sequenzen"
+      base_year_none: "Basisjahr: -"
+      base_year_x: "Basisjahr: %{year}"
+      input: "Eingabe"
+      recognized_dates: "Erkannte Datierung"
+

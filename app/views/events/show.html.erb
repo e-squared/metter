@@ -1,0 +1,18 @@
+<%= headline_tag do %>
+  <%= edit_link @event %>
+  <%= delete_link @event %>
+<% end %>
+
+<div class="well">
+  <dl class="dl-horizontal dl-person">
+    <dt><%=t :type %></dt>
+    <dd><%=tt @event %></dd>
+
+    <dt><%=t ".date" %></dt>
+    <dd><%=l @event.date, :format => :long %></dd>
+
+    <dt><%=t ".description" %></dt>
+    <dd><%= @event.description %></dd>
+  </dl>
+</div>
+

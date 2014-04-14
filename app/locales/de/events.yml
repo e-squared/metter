@@ -1,0 +1,38 @@
+de:
+  events:
+    created: "Ereignis erfolgreich erstellt."
+    updated: "Ereignis erfolgreich aktualisiert."
+    deleted: "Ereignis erfolgreich gelöscht."
+    types:
+      history_event: "Geschichte"
+      holiday_event: "Feiertag"
+      birth_event: "Geburt"
+      death_event: "Tod"
+
+    index:
+      title: "Ereignisse"
+      headline: "Ereignisse"
+      date: "Datum"
+      description: "Beschreibung"
+      new_event: "Neues Ereignis erstellen"
+      edit_event: "Bearbeiten"
+      delete_event: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du dieses Ereignis löschen möchtest?"
+      no_events: "Keine Ereignisse gefunden."
+      find_event: "Ereignis finden"
+
+    show:
+      date: "Datum"
+      description: "Beschreibung"
+      edit_event: "Bearbeiten"
+      delete_event: "Löschen"
+      delete_confirm: "Bist du dir sicher, dass du dieses Ereignis löschen möchtest?"
+
+    new:
+      title: "Neues Ereignis"
+      headline: "Neues Ereignis erstellen"
+
+    edit:
+      title: "Ereignis bearbeiten"
+      headline: "Ereignis bearbeiten"
+

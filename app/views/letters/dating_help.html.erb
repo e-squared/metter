@@ -1,0 +1,286 @@
+<%=t ".about_html" %>
+
+<%
+  datings = {
+    t(".day_month_year") => [
+      "4 Jul 2013",
+      "04 July 2013",
+      "Thursday, 04 July 2013",
+      "July 4, 2013",
+      "July 4th, 2013",
+      "Thu, Jul 4, 2013",
+      "Thursday, July 4, 2013",
+      "2013-07-04",
+      "7/4/2013",
+      "07/04/2013",
+      "4. July 2013",
+      "4. of July 2013",
+      "Thu 4. of July 2013",
+      "the 4th of July 2013",
+      "Thursday the 4th of July 2013",
+      "July the 4th, 2013",
+      "Thursday, July the 4th, 2013",
+      "the Fourth of July 2013"
+    ],
+
+    t(".month_year") => [
+      "Mar 95",
+      "Mar 1995",
+      "March 1995",
+      "?? Mar 1995",
+      "[??] Mar 1995",
+      "(??) Mar 1995",
+      "? March 1995",
+      "[?] March 1995",
+      "(?) March 1995",
+      "Mar ??, 1995",
+      "Mar [??], 1995",
+      "Mar (??), 1995",
+      "March ?, 1995",
+      "March [?], 1995",
+      "March (?), 1995",
+      "??st Mar 1995",
+      "[??]nd Mar 1995",
+      "(??)rd Mar 1995",
+      "?th March 1995",
+      "[?]. March 1995",
+      "(?) of March 1995",
+      "Mar the ??, 1995",
+      "Mar [??]st, 1995",
+      "Mar the (??)nd, 1995",
+      "March ?rd, 1995",
+      "March [?]th, 1995",
+      "March the (?)., 1995",
+      "3/1995",
+      "3/?/1995",
+      "3/[?]/1995",
+      "3/(?)/1995",
+      "3/??/1995",
+      "3/[??]/1995",
+      "3/(??)/1995",
+      "1995-03-??",
+      "1995-03-[??]",
+      "1995-03-(??)"
+    ],
+
+    t(".year") => [
+      "1945",
+      "1945-?-?",
+      "1945-[?]-[?]",
+      "1945-(?)-(?)",
+      "1945-??-??",
+      "1945-[??]-[??]",
+      "1945-(??)-(??)",
+      "?/?/1945",
+      "[?]/[?]/1945",
+      "(?)/(?)/1945",
+      "??/??/1945",
+      "[??]/[??]/1945",
+      "(??)/(??)/1945",
+      "? ? 1945",
+      "[?] [?] 1945",
+      "(?) (?) 1945",
+      "?? ?? 1945",
+      "[??] [??] 1945",
+      "(??) (??) 1945",
+      "? ?, 1945",
+      "[?] [?], 1945",
+      "(?) (?), 1945",
+      "?? ??, 1945",
+      "[??] [??], 1945",
+      "(??) (??), 1945"
+    ],
+
+    t(".beginning_middle_end_of_month") => [
+      "Beginning of Feb 1850",
+      "early February 1850",
+      "Middle of Feb 1850",
+      "mid-February 1850",
+      "End of Feb 1850",
+      "late February 1850"
+    ],
+
+    t(".beginning_middle_end_of_year") => [
+      "Beginning of 1969",
+      "early 1969",
+      "Middle of 1969",
+      "mid-1969",
+      "End of 1969",
+      "late 1969"
+    ],
+
+    t(".from_day_month_year_to_day_month_year") => [
+      "from December 10th, 1976 to April 7th, 1979",
+      "from December 10, 1976 to April 7, 1979",
+      "from Dec 10th, 1976 to Apr 7th, 1979",
+      "from Dec 10, 1976 to Apr 7, 1979",
+      "from 10 December 1976 to 7 April 1979",
+      "from 10 Dec 1976 to 7 Apr 1979",
+      "from 1976-12-10 to 1979-04-07",
+      "from 1976-12-10 to 1979-4-7",
+      "from 12/10/1976 to 04/07/1979",
+      "from 12/10/1976 to 4/7/1979",
+      "December 10th, 1976 to April 7th, 1979",
+      "December 10, 1976 to April 7, 1979",
+      "Dec 10th, 1976 to Apr 7th, 1979",
+      "Dec 10, 1976 to Apr 7, 1979",
+      "10 December 1976 to 7 April 1979",
+      "10 Dec 1976 to 7 Apr 1979",
+      "1976-12-10 to 1979-04-07",
+      "12/10/1976 to 04/07/1979",
+      "December 10th, 1976 - April 7th, 1979",
+      "December 10, 1976 - April 7, 1979",
+      "Dec 10th, 1976 - Apr 7th, 1979",
+      "Dec 10, 1976 - Apr 7, 1979",
+      "10 December 1976 - 7 April 1979",
+      "10 Dec 1976 - 7 Apr 1979",
+      "1976-12-10 - 1979-04-07",
+      "12/10/1976 - 4/7/1979"
+    ],
+
+    t(".from_month_year_to_month_year") => [
+      "from December 1976 to April 1979",
+      "from Dec 1976 to Apr 1979",
+      "from ? Dec 1976 to ? Apr 1979",
+      "from [??] Dec 1976 to [??] Apr 1979",
+      "from 12/1976 to 4/1979",
+      "from 12/(??)/1976 to 4/(??)/1979",
+      "from 1976-12-[??] to 1979-04-[??]",
+      "December 1976 to April 1979",
+      "Dec 1976 to Apr 1979",
+      "? Dec 1976 to ? Apr 1979",
+      "12/1976 to 4/1979",
+      "12/(??)/1976 to 4/(??)/1979",
+      "1976-12-[??] to 1979-04-[??]",
+      "December 1976 - April 1979",
+      "Dec 1976 - Apr 1979",
+      "[??] Dec 1976 - [??] Apr 1979",
+      "12/1976 - 4/1979",
+      "12/(??)/1976 - 4/(??)/1979",
+      "1976-12-[??] - 1979-04-[??]",
+    ],
+
+    t(".from_month_to_month_year") => [
+      "from March to October 2005",
+      "from Mar to Oct 2005",
+      "March to October 2005",
+      "Mar to Oct 2005",
+      "March - October 2005",
+      "Mar - Oct 2005"
+    ],
+
+    t(".from_day_to_day_month_year") => [
+      "from 20 to 24 November 1963",
+      "from 20th to 24th November 1963",
+      "from November 20 to 24, 1963",
+      "from November 20th to 24th, 1963",
+      "20 to 24 November 1963",
+      "20th to 24th November 1963",
+      "November 20 to 24, 1963",
+      "November 20th to 24th, 1963",
+      "20 - 24 November 1963",
+      "20th - 24th November 1963",
+      "November 20 - 24, 1963",
+      "November 20th - 24th, 1963",
+      "November the 20th and 24th, 1963"
+    ],
+
+    t(".from_day_month_to_day_month_year") => [
+      "from 7 April to 10 December 1903",
+      "7th Apr to 10th Dec 1903",
+      "from April 7 to December 10, 1903",
+      "April the 7th to December the 10th, 1903",
+      "7 April - 10 December 1903",
+      "7th Apr - 10th Dec 1903",
+      "April 7 - December 10, 1903",
+      "April the 7th - December the 10th, 1903",
+      "from 04/07 to 12/10/1903",
+      "04/07 to 12/10/1903",
+      "04/07 - 12/10/1903"
+    ],
+
+    t(".holidays") => Holiday.names.map { |name| "#{name} #{Time.now.year}" },
+
+    t(".sequences") => [
+      "4 July 2013, Mar 1995",
+      "1945 / Beginning of February 1850 and End of '69",
+      "from December 10th, 1976 to April 7th, 1979 and from December 1976 to April 79",
+      "from March to October 2005; 11/20-24/1963 / Easter Sunday 13, from 7 April to 10 December 1903"
+    ],
+
+    t(".base_year_none") => [
+      "11/22/63",
+      "November 22, '63",
+      "22 Nov `63",
+      "November the 22nd, ´63",
+      "Independence Day ´63",
+      "11/22/12",
+      "November 22, '12",
+      "22 Nov `12",
+      "November the 22nd, ´12",
+      "Independence Day ´12"
+    ],
+
+    1825 => [
+      "11/22/63",
+      "November 22, '63",
+      "22 Nov `63",
+      "November the 22nd, ´63",
+      "Independence Day ´63"
+    ],
+
+    1776 => [
+      "11/22/63",
+      "November 22, '63",
+      "22 Nov `63",
+      "November the 22nd, ´63",
+      "Independence Day ´63"
+    ]
+  }
+%>
+
+<% datings.each do |category_or_base, queries| %>
+  <%
+    headline, env =
+      if category_or_base.is_a?(Fixnum)
+        [t(".base_year_x", :year => category_or_base), { :base => category_or_base }]
+      else
+        [category_or_base, {}]
+      end
+  %>
+
+  <div class="date-help-category">
+    <h4><%= headline %></h4>
+
+    <table class="table table-bordered table-condensed">
+      <thead>
+        <tr>
+          <th><%=t ".input" %></th>
+          <th><%=t ".recognized_dates" %></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% parse_and_layout_queries(queries, env).each do |parsed_and_queries| %>
+          <%
+            parsed  = parsed_and_queries[:parsed]
+            queries = parsed_and_queries[:queries]
+            count   = queries.size
+            first   = queries.shift
+          %>
+
+          <tr>
+            <td><%= first %></td>
+            <td rowspan="<%= count %>"><%= format_dates parsed.dates %></td>
+          </tr>
+
+          <% queries.each do |query| %>
+            <tr>
+              <td><%= query %></td>
+            </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

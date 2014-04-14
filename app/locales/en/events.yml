@@ -1,0 +1,38 @@
+en:
+  events:
+    created: "Event successfully created."
+    updated: "Event successfully updated."
+    deleted: "Event successfully deleted."
+    types:
+      history_event: "History"
+      holiday_event: "Holiday"
+      birth_event: "Birth"
+      death_event: "Death"
+
+    index:
+      title: "Events"
+      headline: "Events"
+      date: "Date"
+      description: "Description"
+      new_event: "Add New Event"
+      edit_event: "Edit"
+      delete_event: "Delete"
+      delete_confirm: "Are you sure?"
+      no_events: "No events found."
+      find_event: "Find an event"
+
+    show:
+      date: "Date"
+      description: "Description"
+      edit_event: "Edit"
+      delete_event: "Delete"
+      delete_confirm: "Are you sure?"
+
+    new:
+      title: "New Event"
+      headline: "Add a New Event"
+
+    edit:
+      title: "Edit Event"
+      headline: "Edit Event"
+

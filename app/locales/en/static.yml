@@ -1,0 +1,31 @@
+en:
+  static:
+    about:
+      title: "About"
+      headline: "About"
+      content_html: |-
+        <p>
+          <em>Letter Metadata Prototype</em> is an experimental service for capturing
+          correspondence metadata, keeping its focus on usability and efficiency.
+        </p>
+        <p>
+          <em>Letter Metadata Prototype</em> was created as part of the project
+          <a href="http://kompetenzzentrum.uni-trier.de/en/projekte/projekte/briefnetzwerk/" target="_blank">Epistolary 
+          Networks</a>. The project investigates the correspondences and social networks of German scholars which went
+          into exile during Nazi Germany. The project was funded by the German Federal Ministry of Education
+          and Research (BMBF) [grant number 01UG1354C]. The project is a collaboration between the
+          <a href="http://kompetenzzentrum.uni-trier.de/" target="_blank">Trier
+          Center for Digital Humanities</a>, <a href="http://www.dla-marbach.de/" target="_blank">Deutsches Literaturarchiv Marbach</a>, and
+          the <a href="http://www.uni-halle.de/" target="_blank">Martin-Luther-University Halle-Wittenberg</a>.
+          <!-- The principal investigators are ..., with further participation from ... -->
+        </p>
+        <h4 style="margin-top: 20px;">Presentations</h4>
+        <ul>
+          <li>
+            <strong>An Optimized Platform for Capturing Metadata of Historical Correspondences.</strong> M. Andert, J. Ritter, and P. Molitor.
+            Presented at <a href="http://dh2013.unl.edu/" target="_blank">Digital Humanities 2013</a>, Lincoln, Nebraska, July 2013.
+            <a href="http://dh2013.unl.edu/abstracts/ab-246.html" target="_blank">[Abstract]</a>,
+            <a href="%{slides_url}" target="_blank">[Slides]</a>
+          </li>
+        </ul>
+

@@ -1,0 +1,159 @@
+en:
+  letters:
+    created: "Your letter was successfully created."
+    updated: "Your letter was successfully updated."
+    deleted: "Your letter was successfully deleted."
+
+    index:
+      title: "Letters"
+      headline: "Letters"
+      new_letter: "New Letter"
+      edit_letter: "Edit"
+      delete_letter: "Delete"
+      delete_confirm: "Are you sure?"
+      no_letters: "No Letters found."
+      find_letter: "Find letter"
+      sender: "Sender"
+      recipient: "Recipient"
+      date_of_writing: "Date of Writing"
+      summary: "Content Summary"
+
+    show:
+      edit_letter: "Edit"
+      delete_letter: "Delete"
+      delete_confirm: "Are you sure?"
+      sender: "Sender"
+      recipient: "Recipient"
+      date_of_writing: "Date of Writing"
+      summary: "Content Summary"
+
+    new:
+      title: "New Letter"
+      headline: "Add a New Letter"
+      intro_html: |-
+        <p>
+          <em>Letter Metadata Prototype</em> is a web-based proof-of-concept tool for
+          capturing correspondence metadata, keeping its focus on usability and
+          efficiency. It is part of an on-going research project and is a work
+          in progress. We welcome any <a href="%{contact_url}">comments, questions,
+          or suggestions</a> from your experience in using this tool.
+        </p>
+        <p>
+          Please note that due to its prototypical nature, this tool does not
+          save anything when clicking on the submit button.
+        </p>
+
+    edit:
+      title: "Edit Letter"
+      headline: "Edit Letter"
+
+    form:
+      alternative_names_add: "Add another name field"
+      alternative_names_remove: "Remove this field"
+      add_new_person: "Add New Person"
+      create_person: "Create Person"
+      help_on_entering_dates: "Help on Entering Dates"
+      edit_dating: "Edit Dating"
+      apply_dating: "Apply Dating"
+      born: "Born"
+      died: "Died"
+      source: "Source"
+      alternative_names: "Alternative Names"
+      authority_control: "Authority Control"
+      dates: "Date(s)"
+      sorting_date: "Sorting Date"
+      certainty: "Certainty"
+      comment: "Notes"
+      click_on_green_icon_to_edit_dating: "Click the green icon to edit this dating."
+      address_component_types:
+        street_address: "Street Address" # gibt eine präzise Straßenadresse an.
+        route: "Route" # gibt eine Straße mit einer Bezeichnung an, z. B. "B1".
+        intersection: "Intersection" # gibt eine größere Kreuzung, üblicherweise von zwei Hauptstraßen, an.
+        political: "Political" # gibt eine politische Einheit an. Normalerweise zeigt dieser Typ ein Polygon an, das einer öffentlichen Verwaltungseinheit entspricht.
+        country: "Country" # zeigt eine staatliche politische Einheit, ein Land, an und ist normalerweise der Typ mit dem höchsten Rang, der vom Geocodierer zurückgegeben wird.
+        administrative_area_level_1: "Administrative Area Level&nbsp;1" # zeigt eine erstrangige öffentliche Verwaltungseinheit unterhalb der Landesebene an. In den USA entspricht diese Verwaltungsebene den Bundesstaaten. Diese Verwaltungsebenen gibt es nicht in allen Ländern.
+        administrative_area_level_2: "Administrative Area Level&nbsp;2" # zeigt eine zweitrangige öffentliche Verwaltungseinheit unterhalb der Länderebene an. In den USA entspricht diese Verwaltungsebene den Countys (Landkreisen). Diese Verwaltungsebenen gibt es nicht in allen Ländern.
+        administrative_area_level_3: "Administrative Area Level&nbsp;3" # zeigt eine drittrangige öffentliche Verwaltungseinheit unterhalb der Länderebene an. Dieser Typ entspricht einem kleineren öffentlichen Bezirk. Diese Verwaltungsebenen gibt es nicht in allen Ländern.
+        colloquial_area: "Colloquial Area" # zeigt eine allgemein gebräuchliche alternative Bezeichnung für die Einheit an.
+        locality: "Locality" # zeigt die politische Einheit einer Stadt oder Gemeinde an.
+        sublocality: "Sublocality" # zeigt ein erstrangige öffentliche Verwaltungseinheit unterhalb der Ebene einer Stadt an.
+        neighborhood: "Neighborhood" # zeigt ein benanntes Stadtviertel an.
+        premise: "Premise" # zeigt einen benannten Standort an, normalerweise ein einzelnes Gebäude oder einen Gebäudekomplex mit einem gemeinsamen Namen.
+        subpremise: "Subpremise" # zeigt eine erstrangige Einheit unterhalb der Ebene eines benannten Standorts an, normalerweise ein einzelnes Gebäude innerhalb eines Gebäudekomplexes mit einem gemeinsamen Namen.
+        postal_code: "Postal Code" # gibt eine Postleitzahl an, wie sie zum Adressieren von Postsendungen innerhalb des Landes verwendet wird.
+        natural_feature: "Natural Feature" # zeigt ein auffallendes Landschaftsmerkmal an.
+        airport: "Airport" # zeigt einen Flughafen an.
+        park: "Park" # zeigt einen benannten Park an.
+        point_of_interest: "Point of Interest" # zeigt einen benannten interessanten Ort (POI) an. Diese POIs sind normalerweise markante lokale Entitäten, die nicht ohne weiteres in eine andere Kategorie passen, etwa "Empire State Building" oder "Freiheitsstatue".
+        post_box: "Post Box" # gibt einen bestimmten Briefkasten an.
+        street_number: "Street Number" # gibt die exakte Hausnummer an.
+        floor: "Floor" # gibt das Stockwerk innerhalb einer Gebäudeadresse an.
+        room: "Room" # gibt den Raum innerhalb einer Gebäudeadresse an.
+        establishment: "Establishment"
+        latitude: "Latitude"
+        longitude: "Longitude"
+      filter: "Filter"
+      history: "History"
+      births: "Births"
+      deaths: "Deaths"
+      holidays: "Holidays"
+      address: "Address"
+      dating: "Dating"
+      unrecognized_name_html: "<p>Unrecognized name.</p><p>Click the red icon to create a new person.</p>"
+      unrecognized_address_html: "Unrecognized address."
+      unrecognized_dating_html: "<p>Unrecognized dating.</p><p>Click the red icon for help.</p>"
+      sender_and_recipient_are_the_same_person: "Sender and recipient cannot be the same person."
+      sender_was_born_after_recipient_died: "Sender was born after recipient died."
+      sender_died_before_recipient_was_born: "Sender died before recipient was born."
+      recipient_and_sender_are_the_same_person: "Recipient and sender cannot be the same person."
+      recipient_was_born_after_sender_died: "Recipient was born after sender died."
+      recipient_died_before_sender_was_born: "Recipient died before sender was born."
+      sender_was_born_after_date_of_writing: "Sender was born after date of writing."
+      sender_died_before_date_of_writing: "Sender died before date of writing."
+
+    dating_adjust:
+      date_of_writing: "Date of Writing"
+      recognized_dates: "Recognized Date(s)"
+      remove_this_dating: "Remove"
+      add_single_date: "Add Single Date"
+      add_date_range: "Add Date Range"
+      no_recognized_datings: "No recognized date."
+      date_for_chronological_sorting: "Date for Chronological Sorting"
+      certainty: "Certainty"
+      supplementary_notes: "Supplementary Notes"
+      datepicker:
+        format: "mm/dd/yyyy"
+        language: "en"
+
+    dating_help:
+      about_html: |-
+        <p>
+          The following table gives examples of how
+          datings can be entered. On the left
+          you can see the inputs, on the right the respective
+          recognized dates are displayed.
+        </p>
+
+        <p style="margin-bottom: 20px;">
+          If none of these inputs match your date format,
+          you can <a href="/" class="switch-to-manual-date-entry">create
+          a dating manually</a>.
+        </p>
+
+
+      day_month_year: "Day, Month, Year"
+      month_year: "Month, Year"
+      year: "Year"
+      beginning_middle_end_of_month: "Beginning/middle/end of Month"
+      beginning_middle_end_of_year: "Beginning/middle/end of Year"
+      from_day_month_year_to_day_month_year: "from Day, Month, Year to Day, Month, Year"
+      from_month_year_to_month_year: "from Month, Year to Month, Year"
+      from_month_to_month_year: "from Month to Month, Year"
+      from_day_to_day_month_year: "from Day to Day, Month, Year"
+      from_day_month_to_day_month_year: "from Day, Month to Day, Month, Year"
+      holidays: "Holidays"
+      sequences: "Sequences"
+      base_year_none: "Base Year: -"
+      base_year_x: "Base Year: %{year}"
+      input: "Input"
+      recognized_dates: "Recognized dates"

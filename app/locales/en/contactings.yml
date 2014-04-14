@@ -1,0 +1,8 @@
+en:
+  contactings:
+    created: "Your message was successfully sent."
+
+    new:
+      title: "Contact Us"
+      headline: "Contact us"
+      byline: "Please fill out the below form to contact our team, and we'll get back to you as soon as we can."

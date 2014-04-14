@@ -1,0 +1,13 @@
+<%= form_for @user, :html => { :class => "form-horizontal well" } do |form| %>
+  <%= form.validation_errors %>
+
+  <%= form.input :first_name %>
+  <%= form.input :last_name %>
+  <%= form.input :login, :disabled => @user.persisted? %>
+  <%= form.input :password %>
+  <%= form.input :password_confirmation %>
+  <%= form.input :locale, :as => :select, :args => [options_for_locales] %>
+
+  <%= form.buttons %>
+<% end %>
+

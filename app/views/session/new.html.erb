@@ -1,0 +1,12 @@
+<%= form_for @session, :url => login_path, :html => { :class => "form-signin" } do |form| %>
+  <%= headline_tag %>
+
+  <%= form.validation_errors %>
+
+  <%= form.text_field :login, :class => "input-block-level", :placeholder => t(".login") %>
+  <%= form.password_field :password, :class => "input-block-level", :placeholder => t(".password") %>
+
+  <%= hidden_field_tag :return_to, params[:return_to] %>
+  <%= form.submit_button t(".log_in"), :class => "btn btn-large btn-primary" %>
+<% end %>
+

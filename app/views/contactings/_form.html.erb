@@ -1,0 +1,10 @@
+<%= form_for @contacting, :url => contact_path, :html => { :class => "form-horizontal well form-contacting" } do |f| %>
+  <%= f.validation_errors %>
+
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :subject, :class => "span8" %>
+  <%= f.input :message, :as => :text_area, :class => "span8" %>
+
+  <%= f.buttons t(:submit), :cancel => false %>
+<% end %>
